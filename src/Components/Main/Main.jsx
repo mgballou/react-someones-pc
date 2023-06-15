@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router';
 import Home from '../../Pages/Home'
 import Login from '../../Pages/Login'
 import Logout from '../../Pages/Logout'
+import Register from '../../Pages/Register'
+import Box from '../../Pages/Box';
 
 function Main(props) {
 
@@ -13,6 +15,8 @@ function Main(props) {
             <Route path="/" element={<Home/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/logout" element={<Logout/>} />
+            <Route path="/register" element={<Register/>} />
+            <Route path="/box" element={<Box/>} />
         </Routes>
 
     )

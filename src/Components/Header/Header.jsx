@@ -16,6 +16,7 @@ function Header(props) {
                     <Link to="/">Home</Link>
                     <Link to="/login">Login</Link>
                     <Link to="/logout">Logout</Link>
+                    <Link to="/register">Register</Link>
                 </div>
             </nav>
             {user ? `You are ${user.username}` : <></>}
