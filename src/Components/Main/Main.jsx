@@ -6,12 +6,14 @@ import Logout from '../../Pages/Logout'
 import Register from '../../Pages/Register'
 import Box from '../../Pages/Box';
 
+import './Main.css'
+
 function Main(props) {
 
   
 
     return (
-        <Routes>
+        <Routes >
             <Route path="/" element={<Home/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/logout" element={<Logout/>} />

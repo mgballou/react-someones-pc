@@ -43,9 +43,9 @@ function Box(props) {
 
 
     return (
-        <>
+        <section className="main">
         {isLoading ? <Loading /> : loaded()}
-        </>
+        </section>
     )
 }
 

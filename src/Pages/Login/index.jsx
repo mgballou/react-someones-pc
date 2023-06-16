@@ -42,7 +42,7 @@ function Login (props){
     }
 
     return (
-        <section className="">
+        <section className="main">
             <h4 className=''>Connect to Someone's PC</h4>
             <form className=''
             onSubmit={handleSubmit}>

@@ -2,9 +2,9 @@
 function Home(props){
 
     return (
-        <div>
+        <section className="main">
             Home
-        </div>
+        </section>
     )
 }
 
