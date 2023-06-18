@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 :root {
@@ -10,6 +10,7 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #14141B;
+  --transition-speed: 600ms;
 
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

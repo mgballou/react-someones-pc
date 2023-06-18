@@ -5,7 +5,7 @@ import { getAllPokemon } from '../../utilities/poke-services';
 import Loading from '../../Components/Loading/Loading'
 import PokeBoxCard from '../../Components/PokeBoxCard/PokeBoxCard'
 
-
+import './Box.css'
 
 
 function Box(props) {
@@ -43,9 +43,11 @@ function Box(props) {
 
 
     return (
-        <section className="main">
-        {isLoading ? <Loading /> : loaded()}
+        <section>
+            {isLoading ? <Loading /> : loaded()}
         </section>
+        
+       
     )
 }
 

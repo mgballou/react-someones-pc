@@ -13,6 +13,7 @@ function Main(props) {
   
 
     return (
+        <section className="main">
         <Routes >
             <Route path="/" element={<Home/>} />
             <Route path="/login" element={<Login/>} />
@@ -20,6 +21,7 @@ function Main(props) {
             <Route path="/register" element={<Register/>} />
             <Route path="/box" element={<Box/>} />
         </Routes>
+        </section>
 
     )
 }

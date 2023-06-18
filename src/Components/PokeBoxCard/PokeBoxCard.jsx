@@ -1,11 +1,14 @@
+import './PokeBoxCard.css'
+
 function PokeBoxCard({pokemon}){
 
 
     return (
-        <div>
-            <p>{pokemon.name}</p>
-            <img src={pokemon.sprite} alt={pokemon.name}/>
-        </div>
+        
+            <div className="frame">
+            <img className="sprite" src={pokemon.sprite} alt={pokemon.name}/>
+            </div>
+           
     )
 }
 

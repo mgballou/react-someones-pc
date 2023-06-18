@@ -43,7 +43,7 @@ function Register(props){
     }
 
     return (
-        <section className="main">
+        <>
             <h4 className=''>Create an account</h4>
             <form
             className=''
@@ -68,7 +68,7 @@ function Register(props){
 
             </form>
 
-        </section>
+        </>
     )
 }
 

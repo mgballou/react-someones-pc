@@ -1,16 +1,58 @@
+
 .navbar {
     width: 5rem;
     height: 100vh;
     position: fixed;
     background-color: var(--bg-primary);
+    transition: width 200ms ease;
 
 }
 
-.navbar-list {
+.nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    
 }
+
+.nav-item {
+    width: 80%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link{
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+
+}
+
+.nav-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    fill: white;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text{
+    display: block;
+  }
