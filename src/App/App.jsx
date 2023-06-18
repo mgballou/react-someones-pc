@@ -23,7 +23,6 @@ function App() {
       }}>
         <Header />
         <Main />
-        <Footer />
       </UserInfo>
     </>
   )

@@ -5,10 +5,30 @@
     width: 5rem;
     height: 5rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
+.frame:hover{
+    background-color: rgba(164, 157, 157, 0.85);
+    transition: all 200ms ease;
+
+}
+
+.link{
+    text-decoration: none;
+}
+
 .sprite {
-    width: 4rem;
+    width: 5rem;
     margin: auto;
+    transition: width 200ms ease;
+
+}
+
+.sprite:hover {
+    width: 7rem;
+    cursor: pointer;
+    
 }

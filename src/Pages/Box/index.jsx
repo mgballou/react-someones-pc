@@ -43,9 +43,15 @@ function Box(props) {
 
 
     return (
-        <section>
+        <>
+        <h2 className='title'>Box</h2>
+        <p className='subtitle'>All Your Pokemon</p>
+
+
+        <section className='box-display'>
             {isLoading ? <Loading /> : loaded()}
         </section>
+        </>
         
        
     )
