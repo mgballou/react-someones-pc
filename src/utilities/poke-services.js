@@ -12,3 +12,16 @@ export async function getAllPokemon(){
     }
     
 }
+
+export async function createOne(data){
+    try {
+        const pokeData = await pokeAPI.create(data)
+        return pokeData
+
+        
+    } catch (error) {
+        console.log(error)
+        throw new Error(error)
+        
+    }
+}
