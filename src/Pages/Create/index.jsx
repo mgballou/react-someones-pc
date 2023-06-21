@@ -20,7 +20,7 @@ function Create(props){
             const newPokemon = await createOne(createData)
 
             if (newPokemon._id){
-                navigate(`box/${newPokemon._id}`)
+                navigate(`/box/${newPokemon._id}`)
                 setCreateData({
                     name: ""
                 })

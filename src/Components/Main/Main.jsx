@@ -6,6 +6,7 @@ import Logout from '../../Pages/Logout'
 import Register from '../../Pages/Register'
 import Box from '../../Pages/Box';
 import Create from '../../Pages/Create';
+import Pokemon from '../../Pages/Pokemon';
 
 import './Main.css'
 
@@ -21,6 +22,7 @@ function Main(props) {
             <Route path="/logout" element={<Logout/>} />
             <Route path="/register" element={<Register/>} />
             <Route path="/box" element={<Box/>} />
+            <Route path="/box/:id" element={<Pokemon/>} />
             <Route path="/create" element={<Create/>} />
         </Routes>
         </section>

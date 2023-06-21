@@ -6,6 +6,7 @@
     gap: .5rem;
     background-color: #2c515a71;
     align-items: flex-start;
+    align-content:flex-start;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 15%;

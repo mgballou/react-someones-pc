@@ -3,7 +3,7 @@ import { getUserToken } from "./auth-token"
 const BASE_URL = import.meta.env.VITE_POKEMON_URL;
 
 
-export async function index(){
+export async function index() {
     try {
 
         const options = {
@@ -16,21 +16,21 @@ export async function index(){
         }
 
         const response = await fetch(BASE_URL, options)
-        
-        if(response.ok){
+
+        if (response.ok) {
             return response.json()
         } else {
             throw new Error("Invalid Request")
         }
-        
+
     } catch (error) {
         console.log(error)
         return error
-        
+
     }
 }
 
-export async function create(data){
+export async function create(data) {
     try {
 
         const options = {
@@ -44,16 +44,50 @@ export async function create(data){
         }
 
         const response = await fetch(BASE_URL, options)
-        
-        if(response.ok){
+        console.log(response)
+
+        if (response.ok) {
             return response.json()
         } else {
             throw new Error("Invalid Request")
         }
-        
+
     } catch (error) {
         console.log(error)
         return error
-        
+
     }
 }
+
+export async function getOne(data) {
+    try {
+
+        const options = {
+
+            method: 'GET',
+            headers: {
+                'Content-Type': 'text/plain',
+                "Authorization": `bearer ${getUserToken()}`
+            },
+            redirect: 'follow'
+        }
+
+        const URL = BASE_URL + `/${data}`
+        console.log(URL)
+
+        const response = await fetch(URL, options)
+        console.log(response)
+
+        if (response.ok) {
+            return response.json()
+        } else {
+            throw new Error("Invalid Request")
+        }
+
+    } catch (error) {
+        console.log(error)
+        return error
+
+    }
+}
+

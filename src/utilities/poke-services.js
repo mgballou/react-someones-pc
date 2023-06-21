@@ -25,3 +25,17 @@ export async function createOne(data){
         
     }
 }
+
+export async function getOne(data){
+    try {
+        const pokeData = await pokeAPI.getOne(data)
+        console.log(pokeData)
+        return pokeData
+
+    } catch (error) {
+        console.log(error)
+        throw new Error(error)
+        
+    }
+    
+}

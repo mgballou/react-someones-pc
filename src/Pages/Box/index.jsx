@@ -17,6 +17,7 @@ function Box(props) {
 
         try {
             const foundPokemon = await getAllPokemon()
+            
             setAllPokemon(foundPokemon)
             setIsLoading(false)
             
