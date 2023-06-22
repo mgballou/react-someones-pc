@@ -43,13 +43,13 @@ function Pokemon(props) {
         return (
             <>
                 <section className="buttons-display">
-                    {showStats ?
+                    {/* {showStats ?
                         <button
                             onClick={handleSwitch}
                             >Moves</button> : 
                         <button
                             onClick={handleSwitch}
-                            >Stats</button>}
+                            >Stats</button>} */}
                     <button>Release</button>
                 </section>
                 <section className="pokemon-display">
@@ -59,7 +59,7 @@ function Pokemon(props) {
                     <StatInfo pokemonData={pokemonData}/>
                 </section>
                 <section className="details-display">
-                    <StatDetails stats={pokemonData.stats} />
+                    <StatDetails stats={pokemonData.stats} setIsLoading={setIsLoading} />
                 </section>
             </>
 

@@ -76,8 +76,7 @@ export async function getOne(data) {
         console.log(URL)
 
         const response = await fetch(URL, options)
-        console.log(response)
-
+        
         if (response.ok) {
             return response.json()
         } else {
@@ -91,3 +90,32 @@ export async function getOne(data) {
     }
 }
 
+export async function updateOne(data, id){
+    try {
+
+        const options = {
+
+            method: 'PUT',
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `bearer ${getUserToken()}`
+            },
+            body: JSON.stringify(data)
+        }
+        const URL = BASE_URL + `/${id}`
+
+        const response = await fetch(URL, options)
+        
+        if (response.ok) {
+            return response.json()
+        } else {
+            throw new Error("Invalid Request")
+        }
+        
+    } catch (error) {
+
+        console.log(error)
+        return error
+        
+    }
+}

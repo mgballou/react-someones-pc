@@ -39,3 +39,25 @@ export async function getOne(data){
     }
     
 }
+
+export async function updateStats(stats, data, id){
+    const submission = {
+        stats: stats.map((stat, index) => {
+            stat.values.effort = data[`EV${index}`]
+            stat.values.individual = data[`IV${index}`]
+            return stat
+        })
+
+    }
+
+
+    try {
+        const pokeData = await pokeAPI.updateOne(submission, id)
+        return pokeData
+        
+    } catch (error) {
+        console.log(error)
+        throw new Error(error)
+        
+    }
+}
