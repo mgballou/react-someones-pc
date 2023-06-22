@@ -34,5 +34,7 @@
 }
 
 button {
+    display: inline-block;
     width: 15ch;
+
 }

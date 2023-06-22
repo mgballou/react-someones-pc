@@ -34,7 +34,7 @@ function StatDetails({ stats }) {
     })
 
     function handleChange(evt){
-        setStatForm({...statForm, [evt.target.name]: evt.target.value })
+        setStatForm({...statForm, [evt.target.name]: parseInt(evt.target.value) })
         
 
     }

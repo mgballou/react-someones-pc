@@ -6,11 +6,11 @@
 :root {
   font-size: 16px;
 
-  --text-primary: #b6b6b6;
+  --text-primary: #51f3f1;
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #14141B;
-  --transition-speed: 600ms;
+  --transition-speed: 400ms;
 
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -29,7 +29,8 @@
 
 body {
   color: black;
-  background-color: #4B8592;  margin: 0;
+  background-color: #4B8592;  
+  margin: 0;
   padding: 0;
 }
 
