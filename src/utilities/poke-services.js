@@ -13,7 +13,7 @@ export async function getAllPokemon(){
     
 }
 
-export async function createOne(data){
+export async function createPokemon(data){
     try {
         const pokeData = await pokeAPI.create(data)
         return pokeData
@@ -26,9 +26,9 @@ export async function createOne(data){
     }
 }
 
-export async function getOne(data){
+export async function getPokemon(id){
     try {
-        const pokeData = await pokeAPI.getOne(data)
+        const pokeData = await pokeAPI.getOne(id)
         console.log(pokeData)
         return pokeData
 

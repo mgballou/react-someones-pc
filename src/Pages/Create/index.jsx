@@ -1,54 +1,29 @@
 import { useState } from "react"
-import { useNavigate } from 'react-router-dom';
 
-import { createOne } from "../../utilities/poke-services"
 
+import NewPokemon from "../../Components/NewPokemon/NewPokemon"
+import NewTeam from "../../Components/NewTeam/NewTeam"
 
 function Create(props){
-    const [createData, setCreateData] = useState({
-        name: ""
-    })
-    const navigate = useNavigate()
 
-    function handleChange(evt){
-        setCreateData({ ...createData, [evt.target.name]: evt.target.value })
+    const [createPokemon, setCreatePokemon] = useState(true)
+
+    function switchMode(){
+        setCreatePokemon(!createPokemon)
     }
 
-    async function handleSubmit(evt){
-        evt.preventDefault()
-        try {
-            const newPokemon = await createOne(createData)
-
-            if (newPokemon._id){
-                navigate(`/box/${newPokemon._id}`)
-                setCreateData({
-                    name: ""
-                })
-
-            } else {
-                navigate('/create')
-            }
-            
-        } catch (error) {
-            console.log(error)
-        }
-    }
 
     return (
         <>
         <h2 className="title">Create</h2>
-        <p className="subtitle">Enter the name or number of a Pokemon</p>
-        <form
+        <p className="subtitle">Expand your collection</p>
+        
+        {createPokemon ? <button onClick={switchMode}>Build a Team</button> : <button onClick={switchMode}>Add a Pokemon</button>}
+        
+        
 
-        onSubmit={handleSubmit}>
-            <input 
-            type="text"
-            name="name"
-            onChange={handleChange}
-            value={createData.name}/>
-            <button type="submit">Create</button>
-
-        </form>
+        {createPokemon ? <NewPokemon/> : <NewTeam/>}
+   
 
         </>
     )

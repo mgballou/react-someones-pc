@@ -5,7 +5,7 @@ import Loading from "../../Components/Loading/Loading"
 import StatInfo from "../../Components/StatInfo/StatInfo"
 import StatDetails from "../../Components/StatDetails/StatDetails"
 
-import { getOne } from "../../utilities/poke-services"
+import { getPokemon } from "../../utilities/poke-services"
 
 import './Pokemon.css'
 
@@ -20,7 +20,7 @@ function Pokemon(props) {
 
     async function handleRequest() {
         try {
-            const foundPokemon = await getOne(id)
+            const foundPokemon = await getPokemon(id)
 
             if (foundPokemon._id) {
                 setPokemonData(foundPokemon)
