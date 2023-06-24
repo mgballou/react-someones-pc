@@ -3,7 +3,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 import { getAllTeams } from '../../utilities/team-services';
+
+
 import Loading from '../../Components/Loading/Loading'
+import TeamCard from '../../Components/TeamCard/TeamCard';
 
 function Teams(props){
 
@@ -16,7 +19,6 @@ function Teams(props){
             const foundTeams = await getAllTeams()
             
             setAllTeams(foundTeams)
-            console.log(allTeams)
             setIsLoading(false)
             
         } catch (error) {
@@ -31,7 +33,11 @@ function Teams(props){
                 return (
                 <Link 
                 key={team._id} 
-                to={`/teams/${team._id}`}>{team.name}
+                to={`/teams/${team._id}`}>
+                    
+                    <TeamCard 
+                    team={team}
+                    />
                 </Link>
                 )
             })

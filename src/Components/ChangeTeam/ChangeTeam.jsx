@@ -53,8 +53,9 @@ function ChangeTeam({ lists }) {
 
     async function handleSubmit() {
         const newMemberArray = members.map(member => {
-            return member.key
+            return member._id
         })
+        console.log(newMemberArray)
 
         try {
             const updatedTeam = await updateTeam(newMemberArray, id)

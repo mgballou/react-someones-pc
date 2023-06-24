@@ -2,19 +2,20 @@ import { useState, useEffect } from "react"
 
 import { useNavigate, useParams } from "react-router-dom"
 
-import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+
 
 
 import Loading from "../../Components/Loading/Loading"
 import ChangeTeam from "../../Components/ChangeTeam/ChangeTeam";
+import ShowTeam from "../../Components/ShowTeam/ShowTeam";
 
 import { getTeam } from "../../utilities/team-services"
 
-function ShowTeam(props) {
+function Team(props) {
     const [teamData, setTeamData] = useState(null)
     const [otherPokemon, setOtherPokemon] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
-    // const [editing, setEditing] = useState(false)
+    const [editing, setEditing] = useState(false)
     
     
 
@@ -39,18 +40,29 @@ function ShowTeam(props) {
         }
     }
 
+    function toggleEdit(){
+        setEditing(!editing)
+
+    }
+
     function loaded(){
    
 
         const lists = {
-            members: teamData.pokemon,
+            members: teamData?.pokemon,
             others: otherPokemon
         }
 
         return (
-            <ChangeTeam
-            lists={lists}
-            />
+            <>
+            {editing ?  <ChangeTeam
+                lists={lists}
+                /> : <ShowTeam 
+                members={lists.members}/>}
+            
+            </>
+            
+           
 
         )
 
@@ -64,11 +76,17 @@ function ShowTeam(props) {
     return (
         <>
             <h1 className="title"> Details</h1>
-            <p className="subtitle">Change Team Members</p>
+            <p className="subtitle">View Team Members</p>
+
+            <button
+            onClick={toggleEdit}>{editing ? "View" : "Edit"}</button>
 
             
+<div>
 
             {isLoading ? <Loading /> : loaded()}
+
+</div>
             
            
 

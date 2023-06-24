@@ -103,6 +103,7 @@ export async function updateOne(data, id){
             body: JSON.stringify(data)
         }
         const URL = BASE_URL + `/${id}`
+        console.log(options.body)
 
         const response = await fetch(URL, options)
         
