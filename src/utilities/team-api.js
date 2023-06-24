@@ -44,7 +44,7 @@ export async function create(data) {
         }
 
         const response = await fetch(BASE_URL, options)
-        console.log(response)
+        
 
         if (response.ok) {
             return response.json()
@@ -73,7 +73,7 @@ export async function getOne(data) {
         }
 
         const URL = BASE_URL + `/${data}`
-        console.log(URL)
+       
 
         const response = await fetch(URL, options)
         

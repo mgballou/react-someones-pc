@@ -74,7 +74,7 @@ function Pokemon(props) {
 
     return (
         <>
-            <h1 className="title">Details</h1>
+            <h1 className="title">{pokemonData?.name || "Details"}</h1>
             <p className="subtitle">View and Update stats</p>
 
 

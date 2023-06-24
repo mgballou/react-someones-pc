@@ -3,6 +3,7 @@ import './PokeBoxCard.css'
 import { Link } from 'react-router-dom'
 
 function PokeBoxCard({pokemon}){
+    console.log(pokemon._id)
 
 
     return (

@@ -12,12 +12,11 @@ export async function createTeam(data) {
         
     }
 
-
 }
 
 export async function getAllTeams(){
     try {
-        const teamData = await teamAPI.index(data)
+        const teamData = await teamAPI.index()
         return teamData
         
     } catch (error) {
@@ -39,4 +38,16 @@ export async function getTeam(id){
         
     }
     
+}
+
+export async function updateTeam(data, id){
+    try {
+        const teamData = await teamAPI.updateOne(data, id)
+        return teamData
+        
+    } catch (error) {
+        console.log(error)
+        throw new Error(error)
+        
+    }
 }
