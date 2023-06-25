@@ -4,17 +4,12 @@ import { useNavigate, useParams } from "react-router-dom"
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd"
 
 
-import { getTeam, updateTeam } from "../../utilities/team-services"
+import { updateTeam } from "../../utilities/team-services"
 
 function ChangeTeam({ lists }) {
 
-    // const [teamData, setTeamData] = useState(null)
-    // const [otherPokemon, setOtherPokemon] = useState(null)
-    // const [isLoading, setIsLoading] = useState(true)
-
     const [members, setMembers] = useState(lists.members)
     const [others, setOthers] = useState(lists.others)
-
 
     const navigate = useNavigate()
 
@@ -24,6 +19,7 @@ function ChangeTeam({ lists }) {
         console.log(result)
         if (!result.destination) return;
         const { source, destination } = result;
+        if (destination.droppableId == "members" && members.length > 5) return;
         if (source.droppableId == destination.droppableId) return;
 
         const sourceItems = (source.droppableId == "members") ? members : others
@@ -59,9 +55,10 @@ function ChangeTeam({ lists }) {
 
         try {
             const updatedTeam = await updateTeam(newMemberArray, id)
+            console.log(updatedTeam)
 
-            if (updatedTeam._id) {
-                console.log(updatedTeam)
+            if (!updatedTeam._id) {
+                navigate(`/teams/${id}`)
             }
 
         } catch (error) {

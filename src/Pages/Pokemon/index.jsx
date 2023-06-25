@@ -5,7 +5,7 @@ import Loading from "../../Components/Loading/Loading"
 import StatInfo from "../../Components/StatInfo/StatInfo"
 import StatDetails from "../../Components/StatDetails/StatDetails"
 
-import { getPokemon } from "../../utilities/poke-services"
+import { getPokemon, deletePokemon } from "../../utilities/poke-services"
 
 import './Pokemon.css'
 
@@ -39,6 +39,25 @@ function Pokemon(props) {
         setShowStats(!showStats)
     }
 
+    async function handleRelease(){
+        try {
+            const deletedPokemon = await deletePokemon(id)
+            console.log(deletedPokemon)
+
+            if (deletedPokemon) {
+                setPokemonData(null)
+                setIsLoading(true)
+                navigate('/box')
+            } else {
+                navigate(`/box/${id}`)
+            }
+            
+        } catch (error) {
+            console.log(error)
+            
+        }
+    }
+
     function loaded() {
         return (
             <>
@@ -50,7 +69,7 @@ function Pokemon(props) {
                         <button
                             onClick={handleSwitch}
                             >Stats</button>} */}
-                    <button>Release</button>
+                    <button onClick={handleRelease}>Release</button>
                 </section>
                 <section className="pokemon-display">
                     <div className="show-frame">

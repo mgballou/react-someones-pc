@@ -119,3 +119,36 @@ export async function updateOne(data, id){
         
     }
 }
+
+export async function deleteOne(id){
+    console.log(id)
+    try {
+
+        const options = {
+
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'text/plain',
+                "Authorization": `bearer ${getUserToken()}`
+            },
+            redirect: 'follow'
+        }
+
+        const URL = BASE_URL + `/${id}`
+        
+
+        const response = await fetch(URL, options)
+        
+        if (response.ok) {
+            return response.json()
+        } else {
+            throw new Error("Invalid Request")
+        }
+
+    } catch (error) {
+        console.log(error)
+        return error
+
+    }
+
+}

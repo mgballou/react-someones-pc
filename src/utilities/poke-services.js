@@ -61,3 +61,18 @@ export async function updateStats(stats, data, id){
         
     }
 }
+
+export async function deletePokemon(id){
+    console.log(id)
+    try {
+        const pokeData = await pokeAPI.deleteOne(id)
+        console.log(pokeData)
+        return pokeData
+
+    } catch (error) {
+        console.log(error)
+        throw new Error(error)
+        
+    }
+
+}
