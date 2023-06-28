@@ -11,13 +11,14 @@ import ShowTeam from "../../Components/ShowTeam/ShowTeam";
 
 import { getTeam } from "../../utilities/team-services"
 
+import './Team.css'
 function Team(props) {
     const [teamData, setTeamData] = useState(null)
     const [otherPokemon, setOtherPokemon] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
     const [editing, setEditing] = useState(false)
-    
-    
+
+
 
     const { id } = useParams()
     const navigate = useNavigate()
@@ -40,13 +41,13 @@ function Team(props) {
         }
     }
 
-    function toggleEdit(){
+    function toggleEdit() {
         setEditing(!editing)
 
     }
 
-    function loaded(){
-   
+    function loaded() {
+
 
         const lists = {
             members: teamData?.pokemon,
@@ -55,40 +56,51 @@ function Team(props) {
 
         return (
             <>
-            {editing ?  <ChangeTeam
-                lists={lists}
-                /> : <ShowTeam 
-                members={lists.members}/>}
-            
+                {editing ? <ChangeTeam
+                    lists={lists}
+                /> : <ShowTeam
+                    members={lists.members} />}
+
             </>
-            
-           
+
+
 
         )
 
     }
 
-    
+
 
 
     useEffect(() => { handleRequest() }, [isLoading])
 
     return (
         <>
-            <h1 className="title"> Details</h1>
-            <p className="subtitle">View Team Members</p>
+            <div className="page-head">
 
-            <button
-            onClick={toggleEdit}>{editing ? "View" : "Edit"}</button>
+                <p className="title"> Details</p>
 
-            
-<div>
+            </div>
+            <div className="banner">
+                <button
+                    onClick={toggleEdit}>{editing ? "View" : "Edit"}
+                </button>
 
-            {isLoading ? <Loading /> : loaded()}
+            </div>
 
-</div>
-            
-           
+
+
+
+
+
+
+            <div className="team-display">
+
+                {isLoading ? <Loading /> : loaded()}
+
+            </div>
+
+
 
 
         </>

@@ -45,8 +45,10 @@ function Box(props) {
 
     return (
         <>
-        <h2 className='title'>Box</h2>
-        <p className='subtitle'>All Your Pokemon</p>
+        <div className="page-head">
+        <p className='title'>Box</p>
+        </div>
+        
 
 
         <section className='box-display'>

@@ -15,8 +15,10 @@ function Create(props){
 
     return (
         <>
-        <h2 className="title">Create</h2>
-        <p className="subtitle">Expand your collection</p>
+        <div className="page-head">
+        <p className="title">Create</p>
+        </div>
+        
         
         {createPokemon ? <button onClick={switchMode}>Build a Team</button> : <button onClick={switchMode}>Add a Pokemon</button>}
         

@@ -61,7 +61,7 @@ function Pokemon(props) {
     function loaded() {
         return (
             <>
-                <section className="buttons-display">
+                <section className="banner">
                     {/* {showStats ?
                         <button
                             onClick={handleSwitch}
@@ -69,6 +69,7 @@ function Pokemon(props) {
                         <button
                             onClick={handleSwitch}
                             >Stats</button>} */}
+                
                     <button onClick={handleRelease}>Release</button>
                 </section>
                 <section className="pokemon-display">
@@ -93,8 +94,14 @@ function Pokemon(props) {
 
     return (
         <>
-            <h1 className="title">{pokemonData?.name || "Details"}</h1>
-            <p className="subtitle">View and Update stats</p>
+        <div className="page-head">
+
+            <p className="title">{pokemonData?.name || "Details"}</p>
+
+        </div>
+
+
+            
 
 
 

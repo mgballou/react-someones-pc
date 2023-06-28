@@ -8,6 +8,8 @@ import { getAllTeams } from '../../utilities/team-services';
 import Loading from '../../Components/Loading/Loading'
 import TeamCard from '../../Components/TeamCard/TeamCard';
 
+import './Teams.css'
+
 function Teams(props){
 
     const [allTeams, setAllTeams] = useState(null)
@@ -31,14 +33,13 @@ function Teams(props){
         return (
             allTeams?.map(team => {
                 return (
-                <Link 
-                key={team._id} 
-                to={`/teams/${team._id}`}>
+               
                     
                     <TeamCard 
+                    key={team._id} 
                     team={team}
                     />
-                </Link>
+            
                 )
             })
         )
@@ -47,8 +48,12 @@ function Teams(props){
 
     return (
         <>
-        <h2 className='title'>Teams</h2>
-        <p className='subtitle'>Prepare for battle</p>
+        <div className="page-head">
+
+        <p className='title'>Teams</p>
+        
+
+        </div>
         
         <section className='teams-display'>
             {isLoading ? <Loading /> : loaded()}

@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom'
+
+import "./TeamCard.css"
+
 function TeamCard({team}){
 
     const teamSprites = team.pokemon.map(pokemon => {
@@ -14,9 +18,18 @@ function TeamCard({team}){
     })
 
     return (
-        <div>
-            {team.name}
+        <div className="team-card">
+            <div className='banner'>
+            <p className='subtitle'>{team.name}</p>
+            </div>
+            <Link 
+                to={`/teams/${team._id}`}>
+
+            <div className="sprite-container">
             {teamSprites}
+
+            </div>
+            </Link>
        </div>
     )
 }

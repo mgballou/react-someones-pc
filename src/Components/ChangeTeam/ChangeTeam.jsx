@@ -6,6 +6,8 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd"
 
 import { updateTeam } from "../../utilities/team-services"
 
+import './ChangeTeam.css'
+
 function ChangeTeam({ lists }) {
 
     const [members, setMembers] = useState(lists.members)
@@ -77,13 +79,16 @@ function ChangeTeam({ lists }) {
         <>
             <DragDropContext
                 onDragEnd={result => handleDragEnd(result)}>
+                <div className="small-banner first" >
+                    <p className="subtitle">Team Members</p>
+                </div>
                 <Droppable droppableId="members" >
                     {(provided, snapshot) => {
                         return (
                             <div
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
-                                className={snapshot.isDraggingOver ? "container active" : "container"}>
+                                className={snapshot.isDraggingOver ? "members-container active" : "members-container"}>
                                 {members.map((pokemon, index) => {
                                     return (
                                         <Draggable
@@ -100,8 +105,8 @@ function ChangeTeam({ lists }) {
                                                             userSelect: "none",
                                                             ...provided.draggableProps.style
                                                         }}
-                                                        className={snapshot.isDragging ? "show-frame active" : "show-frame"}>
-                                                        <img className="show-sprite" src={pokemon.sprite} alt={pokemon.name} />
+                                                        className={snapshot.isDragging ? "members-frame active" : "members-frame"}>
+                                                        <img className="members-sprite" src={pokemon.sprite} alt={pokemon.name} />
                                                     </div>
                                                 )
                                             }}
@@ -113,14 +118,21 @@ function ChangeTeam({ lists }) {
                         )
                     }}
                 </Droppable>
-                <p>Other Pokemon</p>
+
+
+                <div className="small-banner">
+                    <p className="subtitle">Other Pokemon</p>
+
+                </div>
+
+
                 <Droppable droppableId="others" >
                     {(provided, snapshot) => {
                         return (
                             <div
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
-                                className={snapshot.isDraggingOver ? "container" : "container active"}>
+                                className={snapshot.isDraggingOver ? "others-container" : "others-container active"}>
                                 {others.map((pokemon, index) => {
                                     return (
                                         <Draggable
@@ -138,8 +150,8 @@ function ChangeTeam({ lists }) {
                                                             userSelect: "none",
                                                             ...provided.draggableProps.style
                                                         }}
-                                                        className={snapshot.isDragging ? "show-frame active" : "show-frame"}>
-                                                        <img className="show-sprite" src={pokemon.sprite} alt={pokemon.name} />
+                                                        className={snapshot.isDragging ? "others-frame active" : "others-frame"}>
+                                                        <img className="others-sprite" src={pokemon.sprite} alt={pokemon.name} />
                                                     </div>
                                                 )
                                             }}

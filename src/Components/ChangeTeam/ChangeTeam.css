@@ -1,0 +1,98 @@
+.others-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--bg-secondary);
+    align-items: flex-start;
+    align-content:flex-start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: .75rem;
+    
+
+}
+
+.members-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+    background-color: var(--bg-secondary);
+    align-items: flex-start;
+    align-content:flex-start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: .75rem;
+
+    
+}
+
+
+.members-frame {
+    background-color: rgba(164, 157, 157, 0.65);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.others-frame {
+    background-color: rgba(164, 157, 157, 0.65);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.members-frame.active{
+    background-color: rgba(164, 157, 157, 0.85);
+    transition: all 200ms ease;
+
+}
+
+.others-frame.active {
+    background-color: rgba(164, 157, 157, 0.85);
+    transition: all 200ms ease;
+    width: 5rem;
+    height: 5rem;
+
+}
+
+
+.members-sprite {
+    width: 5rem;
+    margin: auto;
+    transition: width 200ms ease;
+
+}
+
+.members-frame.active > .members-sprite {
+    width: 7rem;
+    cursor: pointer;
+    
+}
+
+.others-sprite {
+    width: 3rem;
+    margin: auto;
+    transition: width 200ms ease;
+
+}
+
+.others-frame.active > .others-sprite {
+    width: 7rem;
+    cursor: pointer;
+    
+}
+
+.small-banner.first {
+    margin-top: 1rem;
+}

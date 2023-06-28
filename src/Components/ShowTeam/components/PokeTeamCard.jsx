@@ -1,6 +1,7 @@
 import PokeImg from "./PokeImg"
 import Statbox from "./Statbox"
 
+import './PokeTeamCard.css'
 
 function PokeTeamCard({pokemon, index}){
     console.log(pokemon)
@@ -11,7 +12,7 @@ function PokeTeamCard({pokemon, index}){
     
     if (index % 2 !== 0){
         return (
-            <div>
+            <div className="poke-team-card">
                 <Statbox 
                 stats={pokemon.stats}/>
                 <PokeImg 
@@ -20,7 +21,7 @@ function PokeTeamCard({pokemon, index}){
         )
     } else {
         return (
-        <div>
+        <div className="poke-team-card">
                 <PokeImg 
                 pokemon={pokemon}/>
                 <Statbox 

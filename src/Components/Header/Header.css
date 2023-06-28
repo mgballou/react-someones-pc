@@ -3,7 +3,7 @@
     height: 5rem;
     bottom: 0;
     position: fixed;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-dark-primary);
     transition: width 200ms ease;
 
 }
@@ -33,7 +33,7 @@
 
 
 .nav-link {
-    color: var(--text-primary);
+    color: var(--accent-one);
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -54,12 +54,12 @@
     width: 2rem;
     min-width: 2rem;
     margin: 0 1.5rem;
-    fill: var(--text-primary);
+    fill: var(--accent-one);
 }
 
 .nav-link:hover {
     filter: grayscale(0%) opacity(1);
-    background: var(--bg-secondary);
+    background: var(--bg-dark-secondary);
   }
 
 
@@ -109,8 +109,8 @@
         text-transform: uppercase;
         margin-bottom: 1rem;
         text-align: center;
-        color: var(--text-secondary);
-        background: var(--bg-secondary);
+        color: var(--accent-one);
+        background: var(--bg-dark-secondary);
         font-size: 1rem;
         letter-spacing: 0.3ch;
         width: 100%;

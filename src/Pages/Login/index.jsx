@@ -43,7 +43,12 @@ function Login (props){
 
     return (
         <>
-            <h4 className=''>Connect to Someone's PC</h4>
+        <div className="page-head">
+
+            <p className='title'>Connect to Someone's PC</p>
+
+        </div>
+
             <form className=''
             onSubmit={handleSubmit}>
                 <label className=''>username</label>

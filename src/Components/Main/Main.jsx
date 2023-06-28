@@ -18,6 +18,8 @@ function Main(props) {
 
     return (
         <section className="main">
+            <section className="width-container">
+
         <Routes >
             <Route path="/" element={<Home/>} />
             <Route path="/login" element={<Login/>} />
@@ -29,6 +31,7 @@ function Main(props) {
             <Route path="/teams" element={<Teams/>} />
             <Route path="/teams/:id" element={<Team/>} />
         </Routes>
+            </section>
         </section>
 
     )

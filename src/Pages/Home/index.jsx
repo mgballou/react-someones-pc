@@ -3,7 +3,9 @@ function Home(props){
 
     return (
         <>
-            Home
+            <div className="page-head">
+        <p className="title">Welcome, Trainer</p>
+        </div>
         </>
     )
 }

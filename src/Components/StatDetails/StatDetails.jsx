@@ -86,7 +86,10 @@ function StatDetails({ stats, setIsLoading }) {
             onSubmit={handleSubmit}>
             {statComponents}
             
+            <div className="banner">
             <button type="submit">Save Stats</button>
+
+            </div>
 
             </form>
         </div>
