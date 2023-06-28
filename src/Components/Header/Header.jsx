@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import { useContext } from "react"
 
@@ -10,6 +10,11 @@ import './Header.css'
 function Header(props) {
 
     const { user } = useContext(UserContext)
+    const navigate = useNavigate()
+
+    function goBack(){
+        navigate(-1)
+    }
 
     return (
         
@@ -71,9 +76,9 @@ function Header(props) {
                     }
 
                     <li className="nav-item">
-                        <Link to="/info" className="nav-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" /></svg>
-                            <span className="link-text">Info</span>
+                        <Link to="#" className="nav-link" onClick={goBack}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                            <span className="link-text">Back</span>
                         </Link>
                     </li>
 

@@ -35,18 +35,23 @@ function NewTeam(props){
     }
 
     return (
-        <form
 
-        onSubmit={handleSubmit}>
-            <label>New Team</label>
-            <input 
-            type="text"
-            name="name"
-            onChange={handleChange}
-            value={teamData.name}/>
-            <button type="submit">Create</button>
+        
+<form
 
-        </form>
+onSubmit={handleSubmit}>
+    <label>New Team</label>
+    <input 
+    type="text"
+    name="name"
+    onChange={handleChange}
+    value={teamData.name}/>
+    <button type="submit">Create</button>
+
+</form>
+
+
+        
 
     )
 

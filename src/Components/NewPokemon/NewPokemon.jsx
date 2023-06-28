@@ -35,18 +35,22 @@ function NewPokemon(props){
     }
 
     return (
-        <form
 
-        onSubmit={handleSubmit}>
-            <label>New Pokemon</label>
-            <input 
-            type="text"
-            name="name"
-            onChange={handleChange}
-            value={pokeData.name}/>
-            <button type="submit">Create</button>
+        
+ <form
 
-        </form>
+onSubmit={handleSubmit}>
+    <label>New Pokemon</label>
+    <input 
+    type="text"
+    name="name"
+    onChange={handleChange}
+    value={pokeData.name}/>
+    <button type="submit">Create</button>
+
+</form>
+    
+       
 
     )
 

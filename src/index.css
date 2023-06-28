@@ -55,8 +55,8 @@ body::-webkit-scrollbar-thumb{
 
 button {
   display: inline-block;
-  width: 12ch;
-  margin: .5rem;
+  min-width: 12ch;
+  margin: 1rem;
 
 }
 

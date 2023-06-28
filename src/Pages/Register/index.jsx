@@ -53,6 +53,13 @@ function Register(props) {
                 <p className='title'>Create an account</p>
 
             </div>
+
+            <div className="form-wrapper">
+                <div className="small-banner">
+                    <p className="subtitle">Register</p>
+                </div>
+
+
             <form
                 className=''
                 onSubmit={handleSubmit}>
@@ -75,6 +82,10 @@ function Register(props) {
                 <button className="" type="submit">Sign Up</button>
 
             </form>
+
+
+            </div>
+            
 
         </>
     )
