@@ -13,19 +13,27 @@ function PokeTeamCard({pokemon, index}){
     if (index % 2 !== 0){
         return (
             <div className="poke-team-card">
+                <div className="banner">{pokemon.name} - #{pokemon.dexNumber}</div>
+                <div className="team-card-flex">
                 <Statbox 
                 stats={pokemon.stats}/>
                 <PokeImg 
                 pokemon={pokemon}/>
+                </div>
             </div>
         )
     } else {
         return (
         <div className="poke-team-card">
-                <PokeImg 
+            <div className="banner">{pokemon.name} - #{pokemon.dexNumber}</div>
+            <div className="team-card-flex">
+            <PokeImg 
                 pokemon={pokemon}/>
                 <Statbox 
                 stats={pokemon.stats}/>
+
+            </div>
+               
             </div>
             
          )

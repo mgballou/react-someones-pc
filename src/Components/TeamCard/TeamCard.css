@@ -33,8 +33,39 @@
     border: .25rem solid var(--bg-dark-primary);
 }
 
+
+.team-card-frame {
+    background-color: rgba(164, 157, 157, 0.65);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.team-card-sprite {
+    width: 5rem;
+    margin: auto;
+    transition: width 200ms ease;
+
+}
+
+
 @media only screen and (min-width: 600px) {
     .sprite-container {
         padding: 2rem;
     }
+
+    .team-card-frame {
+        width: 8rem;
+        height: 8rem
+    }
+
+    .team-card-sprite {
+        width: 7rem;
+    }
+
 }

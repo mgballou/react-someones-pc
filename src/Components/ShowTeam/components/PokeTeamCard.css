@@ -10,7 +10,7 @@
     
 }
 
-.team.frame:hover{
+.team-frame:hover{
     background-color: rgba(164, 157, 157, 0.85);
     transition: all 200ms ease;
 

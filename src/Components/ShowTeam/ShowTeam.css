@@ -1,11 +1,23 @@
 .poke-team-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    
     margin-top: 1.5rem;
     background-color: var(--bg-secondary);
     border: 1px solid white;
     border-radius: .75rem;
     padding: .5rem;
+    
+}
+
+.team-card-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: .5rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .poke-team-card{
+        max-width: 345px;
+    }
     
 }

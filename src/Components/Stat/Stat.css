@@ -1,6 +1,7 @@
 .stat {
     background-color: var(--bg-secondary);
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    border: .25rem solid var(--bg-dark-primary);
     border-radius: .75rem;
     margin-bottom: .5rem;
     padding: .5rem;
