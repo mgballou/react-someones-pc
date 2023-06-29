@@ -5,11 +5,18 @@
     justify-content: center;
     background-color: var(--bg-secondary);
     align-items: flex-start;
-    align-content:flex-start;
+    align-content: flex-start;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: .75rem;
-    
+    border: .25rem solid var(--bg-dark-primary);
+    transition: all 300ms ease;
+
+}
+
+.others-container.on,
+.members-container.on {
+    border: .25rem solid var(--accent-one);
 
 }
 
@@ -21,12 +28,14 @@
     justify-content: center;
     background-color: var(--bg-secondary);
     align-items: flex-start;
-    align-content:flex-start;
+    align-content: flex-start;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: .75rem;
+    border: .25rem solid var(--bg-dark-primary);
+    transition: all 300ms ease;
 
-    
+
 }
 
 
@@ -38,7 +47,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    transition: all 200ms ease;
+
 }
 
 .others-frame {
@@ -49,18 +59,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    transition: all 200ms ease;
+
 }
 
-.members-frame.active{
+.members-frame.active {
     background-color: rgba(164, 157, 157, 0.85);
-    transition: all 200ms ease;
+    
 
 }
 
 .others-frame.active {
     background-color: rgba(164, 157, 157, 0.85);
-    transition: all 200ms ease;
     width: 5rem;
     height: 5rem;
 
@@ -74,10 +84,10 @@
 
 }
 
-.members-frame.active > .members-sprite {
+.members-frame.active>.members-sprite {
     width: 7rem;
     cursor: pointer;
-    
+
 }
 
 .others-sprite {
@@ -87,12 +97,48 @@
 
 }
 
-.others-frame.active > .others-sprite {
+.others-frame.active>.others-sprite {
     width: 7rem;
     cursor: pointer;
-    
+
 }
 
 .small-banner.first {
     margin-top: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .others-container,
+    .members-container {
+        padding: 2rem;
+    }
+
+    .members-frame{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .members-sprite {
+        width: 7rem;
+       
+    
+    }
+    
+    .members-frame.active>.members-sprite {
+        width: 10rem;
+        
+    
+    }
+
+    .others-frame.active{
+        width: 8rem;
+    }
+
+    .others-frame.active>.others-sprite {
+        width: 10rem;
+        
+    
+    }
+
 }

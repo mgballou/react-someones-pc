@@ -17,7 +17,10 @@ function Logout(props){
 
     return (
         <>
+        <div className="form-wrapper">
             <p>Successfully logged out</p>
+
+        </div>
         </>
     )
 }

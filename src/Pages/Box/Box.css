@@ -10,6 +10,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: .75rem;
+    border: .25rem solid var(--bg-dark-primary);
 }
 
 @media only screen and (min-width: 600px) {
@@ -17,5 +18,5 @@
         padding: 1rem;
     }
 
-    
+
 }

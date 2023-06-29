@@ -88,7 +88,7 @@ function ChangeTeam({ lists }) {
                             <div
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
-                                className={snapshot.isDraggingOver ? "members-container active" : "members-container"}>
+                                className={snapshot.isDraggingOver ? "members-container on" : "members-container"}>
                                 {members.map((pokemon, index) => {
                                     return (
                                         <Draggable
@@ -132,7 +132,7 @@ function ChangeTeam({ lists }) {
                             <div
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
-                                className={snapshot.isDraggingOver ? "others-container" : "others-container active"}>
+                                className={snapshot.isDraggingOver ? "others-container on" : "others-container"}>
                                 {others.map((pokemon, index) => {
                                     return (
                                         <Draggable
