@@ -2,8 +2,15 @@ function StatInfo({pokemonData}){
 
     return (
         <div className="infobox">
-            <p>{pokemonData.abilities.current}</p>
-            <p>{pokemonData.type2 ? `${pokemonData.type1} / ${pokemonData.type2}` : `${pokemonData.type1}`}</p>
+            <div>
+            <p>TYPE:</p>   
+            <p>{pokemonData.type2 ? `${pokemonData.type1.toUpperCase()} / ${pokemonData.type2.toUpperCase()}` : `${pokemonData.type1.toUpperCase()}`}</p>
+            </div>
+            <div>
+                <p>ABILITY:</p>
+            <p>{pokemonData.abilities.current.toUpperCase()}</p>
+
+            </div>
             {/* <p>{pokemonData.heldItem}</p> */}
         </div>
     )

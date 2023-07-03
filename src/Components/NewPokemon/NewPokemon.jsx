@@ -4,22 +4,22 @@ import { useNavigate } from 'react-router-dom';
 import { createPokemon } from "../../utilities/poke-services"
 
 
-function NewPokemon(props){
+function NewPokemon(props) {
     const [pokeData, setCreateData] = useState({
         name: ""
     })
     const navigate = useNavigate()
 
-    function handleChange(evt){
+    function handleChange(evt) {
         setCreateData({ ...pokeData, [evt.target.name]: evt.target.value })
     }
 
-    async function handleSubmit(evt){
+    async function handleSubmit(evt) {
         evt.preventDefault()
         try {
             const newPokemon = await createPokemon(pokeData)
 
-            if (newPokemon._id){
+            if (newPokemon._id) {
                 navigate(`/box/${newPokemon._id}`)
                 setCreateData({
                     name: ""
@@ -28,7 +28,7 @@ function NewPokemon(props){
             } else {
                 navigate('/create')
             }
-            
+
         } catch (error) {
             console.log(error)
         }
@@ -36,21 +36,21 @@ function NewPokemon(props){
 
     return (
 
-        
- <form
 
-onSubmit={handleSubmit}>
-    <label>New Pokemon</label>
-    <input 
-    type="text"
-    name="name"
-    onChange={handleChange}
-    value={pokeData.name}/>
-    <button type="submit">Create</button>
+        <form
 
-</form>
-    
-       
+            onSubmit={handleSubmit}>
+            <label>New Pokemon</label>
+            <input
+                type="text"
+                name="name"
+                onChange={handleChange}
+                value={pokeData.name} />
+            <button type="submit">Create</button>
+
+        </form>
+
+
 
     )
 

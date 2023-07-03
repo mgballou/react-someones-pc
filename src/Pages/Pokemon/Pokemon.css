@@ -19,10 +19,11 @@
 .pokemon-display {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
     width: 100%;
+    gap: 1rem;
 }
 
 .buttons-display{
@@ -35,14 +36,34 @@
 }
 
 .infobox {
-    background-color: rgba(164, 157, 157, 0.65);
+    background-color: var(--bg-secondary);
     border-radius: .75rem;
+    border: .25rem solid var(--bg-dark-primary);
     width: 10rem;
     height: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 
+}
+
+.infobox > div {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.infobox > div > p {
+    padding: 0;
+    margin: 0;
+}
+
+.details-display{
+    max-width: 768px;
+    margin: 0 auto;
 }
 
 .details-display > div > form {

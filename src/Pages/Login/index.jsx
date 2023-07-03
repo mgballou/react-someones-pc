@@ -24,7 +24,7 @@ function Login(props) {
 
             if (incomingUser.token) {
                 navigate('/')
-                console.log(incomingUser)
+            
                 setUserToken(incomingUser.token)
                 setUser(incomingUser.user)
                 setLoginForm({
@@ -59,7 +59,6 @@ function Login(props) {
 
             if (incomingUser.token) {
                 navigate('/')
-                console.log(incomingUser)
                 setUserToken(incomingUser.token)
                 setUser(incomingUser.user)
                 setLoginForm({

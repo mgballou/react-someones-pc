@@ -21,9 +21,13 @@ function Create(props){
         </div>
         <div className="form-wrapper">
             <div className='small-banner inside'>
-        {createPokemon ? <button onClick={switchMode}>Build a Team</button> : <button onClick={switchMode}>Add a Pokemon</button>}
+        {createPokemon ? <><button onClick={switchMode}>Build a Team</button>
+        <p>Enter the number or name of any Pokemon (spelling counts)</p> </>: <><button onClick={switchMode}>Add a Pokemon</button>
+        <p>Enter a name for your next team</p></>}
 
             </div>
+
+            
         {createPokemon ? <NewPokemon/> : <NewTeam/>}
 
             </div>

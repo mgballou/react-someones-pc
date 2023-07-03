@@ -8,9 +8,9 @@ function TeamCard({team}){
         return (
             <div 
             key={pokemon._id}
-            className="frame">
+            className="team-card-frame">
                 
-            <img className="sprite" src={pokemon.sprite} alt={pokemon.name}/>
+            <img className="team-card-sprite" src={pokemon.sprite} alt={pokemon.name}/>
                 
             </div>
             

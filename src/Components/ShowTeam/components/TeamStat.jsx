@@ -24,7 +24,7 @@ function TeamStat({stat}){
 
     return (
         <div>
-        {stat.statName}: {calculateStat()}
+        {stat.statName.toUpperCase()}: <span>{calculateStat()}</span>
         </div>
     )
 }
