@@ -4,8 +4,6 @@ import Statbox from "./Statbox"
 import './PokeTeamCard.css'
 
 function PokeTeamCard({pokemon, index}){
-    console.log(pokemon)
-    console.log(index)
 
     
     

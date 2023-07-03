@@ -42,7 +42,6 @@ function Pokemon(props) {
     async function handleRelease(){
         try {
             const deletedPokemon = await deletePokemon(id)
-            console.log(deletedPokemon)
 
             if (deletedPokemon) {
                 setPokemonData(null)

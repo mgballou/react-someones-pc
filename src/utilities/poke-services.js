@@ -29,7 +29,6 @@ export async function createPokemon(data){
 export async function getPokemon(id){
     try {
         const pokeData = await pokeAPI.getOne(id)
-        console.log(pokeData)
         return pokeData
 
     } catch (error) {
@@ -63,10 +62,8 @@ export async function updateStats(stats, data, id){
 }
 
 export async function deletePokemon(id){
-    console.log(id)
     try {
         const pokeData = await pokeAPI.deleteOne(id)
-        console.log(pokeData)
         return pokeData
 
     } catch (error) {

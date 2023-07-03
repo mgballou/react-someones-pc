@@ -121,7 +121,7 @@ export async function updateOne(data, id){
 }
 
 export async function deleteOne(id){
-    console.log(id)
+    
     try {
 
         const options = {
