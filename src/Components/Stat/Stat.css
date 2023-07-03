@@ -1,0 +1,42 @@
+.stat {
+    background-color: var(--bg-secondary);
+    border: 1px solid white;
+    border-radius: .75rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    color: white;
+    width: 100%;
+}
+
+.stat-input-row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+
+}
+
+.total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    
+}
+
+.value {
+    width: 6ch;
+    margin: 0 .5rem;
+}
+
+.stat-input-row > div > label {
+    font-size: 1.5rem;
+}
+
+.stat-name {
+    text-transform: uppercase;
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,135 @@
+.navbar {
+    width: 100vw;
+    height: 5rem;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--bg-dark-primary);
+    transition: width 200ms ease;
+
+}
+
+.logo {
+    display: none
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+
+}
+
+.nav-item {
+    width: 80%;
+}
+
+.nav-item:last-child {
+    margin-left: auto;
+}
+
+
+.nav-link {
+    color: var(--accent-one);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    
+    height: 5rem;
+    filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+
+}
+
+.nav-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    fill: var(--accent-one);
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-dark-secondary);
+  }
+
+
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+      top: 0;
+      width: 5rem;
+      height: 100vh;
+    }
+
+  
+    .navbar:hover {
+      width: 16rem;
+    }
+  
+    .navbar:hover .link-text {
+      display: inline;
+    }
+  
+    .navbar:hover .logo svg
+    {
+      margin-left: 11rem;
+    }
+  
+    .navbar:hover .logo-text
+    {
+      left: 0px;
+    }
+
+    .nav-list{
+        flex-direction: column;
+    }
+    .nav-link {
+        align-items: center;
+
+    }
+
+    .nav-item:last-child {
+        margin-top: auto;
+        margin-left: 0;
+    }
+
+    .logo {
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: var(--accent-one);
+        background: var(--bg-dark-secondary);
+        font-size: 1rem;
+        letter-spacing: 0.3ch;
+        width: 100%;
+      }
+      
+      .logo svg {
+        transform: scale(1);
+        transition: var(--transition-speed);
+      }
+      
+      .logo-text {
+        display: inline;
+        position: absolute;
+        left: -999px;
+        transition: var(--transition-speed);
+      }
+      
+      .navbar:hover .logo svg {
+        transform: scale(1.5);
+      }
+    
+  }

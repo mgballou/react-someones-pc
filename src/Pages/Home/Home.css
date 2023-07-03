@@ -1,0 +1,44 @@
+.home {
+    background-color: var(--bg-secondary);
+    padding: 1.5rem;
+    border: .25rem solid var(--bg-dark-primary);
+    border-radius: .75rem;
+    margin-top: 2rem;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.panel {
+    background-color: var(--bg-dark-primary);
+    padding: 1rem;
+    border-radius: .75rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.main-text {
+    font-size: 1.25rem;
+    font-weight: 300;
+
+}
+
+.body-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.body-link {
+    color: #71CADE;
+    text-decoration: none;
+
+}
+
+.body-link:hover {
+    text-decoration: underline;
+
+    
+}
