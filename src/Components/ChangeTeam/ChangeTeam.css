@@ -11,6 +11,9 @@
     border-radius: .75rem;
     border: .25rem solid var(--bg-dark-primary);
     transition: all 300ms ease;
+    min-height: 200px;
+    min-width: 280px;
+    
 
 }
 
@@ -34,7 +37,8 @@
     border-radius: .75rem;
     border: .25rem solid var(--bg-dark-primary);
     transition: all 300ms ease;
-
+    min-height: 200px;
+    min-width: 280px;
 
 }
 

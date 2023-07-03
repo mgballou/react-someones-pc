@@ -76,7 +76,7 @@ function ChangeTeam({ lists }) {
 
 
     return (
-        <>
+        <div className="change-team-display">
             <DragDropContext
                 onDragEnd={result => handleDragEnd(result)}>
                 <div className="small-banner first" >
@@ -164,7 +164,7 @@ function ChangeTeam({ lists }) {
                     }}
                 </Droppable>
             </DragDropContext>
-        </>
+        </div>
     )
 }
 

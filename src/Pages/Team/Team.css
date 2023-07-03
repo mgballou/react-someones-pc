@@ -1,4 +1,4 @@
-.team-display {
+.show-team-display {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,8 +6,16 @@
     flex-wrap: wrap;
 }
 
+.change-team-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+
+}
+
 @media only screen and (min-width: 600px) {
-    .team-display {
+    .show-team-display {
         max-height: 700px;
     }
 }
