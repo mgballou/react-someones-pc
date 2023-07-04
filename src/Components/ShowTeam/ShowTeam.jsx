@@ -5,7 +5,7 @@ import './ShowTeam.css'
 function ShowTeam({members}){
 
     return (
-        <>
+        <div className="show-team-display">
         
         {members.map((member, index) => {
             return (
@@ -16,7 +16,7 @@ function ShowTeam({members}){
                 />
             )
         })}
-        </>
+        </div>
     )
 }
 

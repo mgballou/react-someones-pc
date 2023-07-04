@@ -53,19 +53,32 @@ function Team(props) {
             members: teamData?.pokemon,
             others: otherPokemon
         }
+        
 
-        return (
-            <>
-                {editing ? <ChangeTeam
-                    lists={lists}
-                /> : <ShowTeam
-                    members={lists.members} />}
+        if (!teamData.pokemon[0] && !editing){
+            return (
+                <div className="small-banner first">
+                    <p>Click edit to add members to your team</p>
+                </div>
+            )
+        } else {
 
-            </>
+            return (
+                <>
+                    {editing ? <ChangeTeam
+                        lists={lists}
+                    /> : <ShowTeam
+                        members={lists.members} />}
+    
+                </>
+    
+    
+    
+            )
 
+        }
 
-
-        )
+        
 
     }
 
@@ -94,11 +107,11 @@ function Team(props) {
 
 
 
-            <div className="team-display">
+            
 
-                {isLoading ? <Loading /> : loaded()}
+            {isLoading ? <Loading /> : loaded()}
 
-            </div>
+            
 
 
 
