@@ -7,7 +7,7 @@
 
 > This project is a full stack MERN application. The API and database integration code can be found [here](https://github.com/mgballou/api-someonespc).
 
-> I personally rebuilt & expanded this project from the original. The original Someone's PC was a group project developed with Anthony Blalock & Ciaran Kearney. Special thanks to them for all of their collaboration and contributions! The original Someone's PC can be found [here](#https://github.com/mgballou/someones-pc).
+> I personally rebuilt & expanded this project from the original. The original Someone's PC was a group project developed with Anthony Blalock & Ciaran Kearney. Special thanks to them for all of their collaboration and contributions! The original Someone's PC can be found [here](https://github.com/mgballou/someones-pc).
 
 
 ## Table of Contents
