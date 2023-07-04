@@ -33,6 +33,8 @@ VITE_TEAMS_URL=http://localhost:[PORT]/teams
 ```
 > Then, run the application with `npm run dev`. The back end repo will need to be running as well, and instructions can be found in that README.
 
+> Within src/Pages/Login/index.jsx, there is a hard-coded value for the guest user button. You'll need to adjust this to match a user set up in your own database. 
+
 ## Screenshots
 
 
@@ -41,7 +43,7 @@ VITE_TEAMS_URL=http://localhost:[PORT]/teams
 
 ### Current
 
-> * Create accounts and log in (JWT authorization)
+> * Create accounts and log in (JWT auth)
 > * Create any Pokemon up to #1008 and add it to your box
 > * Adjust the stats of each Pokemon
 > * Create Teams, and drag-and-drop your Pokemon into them
