@@ -31,7 +31,7 @@ VITE_POKEMON_URL=http://localhost:[PORT]/pokemon
 VITE_TEAMS_URL=http://localhost:[PORT]/teams
 
 ```
-> Then, run the server with `npm run dev`. The back end repo will need to be running as well, and instructions can be found in that README.
+> Then, run the application with `npm run dev`. The back end repo will need to be running as well, and instructions can be found in that README.
 
 ## Screenshots
 
