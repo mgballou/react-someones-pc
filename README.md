@@ -13,10 +13,19 @@
 ## Table of Contents
 
 - [Project Description](#project-description)
+- [Usage](#usage)
 - [Installation](#installation)
 - [Screenshots](#screenshots)
 - [Features](#features)
 - [Technologies](#technologies)
+
+## Usage
+
+> Live demo is available at https://someones-pc.netlify.app/
+>
+> Create an account and log in, or use our guest account to explore features.
+> 
+> All the Pokémon you Create can be found in your Box. From there, click on a sprite to adjust that Pokémon’s stats. Once you’ve got a squad ready, Create a new Team and drop in who you’d like to carry in your party. Keep making changes, and make new Teams to plan out different strategies and combinations. Save your plans and refer back between in-game sessions.
 
 ## Installation
 
@@ -37,6 +46,19 @@ VITE_TEAMS_URL=http://localhost:[PORT]/teams
 
 ## Screenshots
 
+<img width="512" alt="Screen Shot 2023-07-05 at 1 16 00 PM" src="https://github.com/mgballou/react-someones-pc/assets/125108218/32f98b1b-5cf1-4611-84bb-f3e3cee4f20f">
+
+<img width="512" alt="Screen Shot 2023-07-05 at 1 16 25 PM" src="https://github.com/mgballou/react-someones-pc/assets/125108218/31475828-6adf-445e-b224-001bf8278b7e">
+
+<img width="512" alt="Screen Shot 2023-07-05 at 1 17 09 PM" src="https://github.com/mgballou/react-someones-pc/assets/125108218/39f097f2-8cf6-4c47-9bce-708ccabfbce7">
+
+<img width="512" alt="Screen Shot 2023-07-05 at 1 17 23 PM" src="https://github.com/mgballou/react-someones-pc/assets/125108218/78014ba6-6cfc-4227-9379-268e5794dab0">
+
+<img width="269" alt="Screen Shot 2023-07-05 at 1 20 26 PM" src="https://github.com/mgballou/react-someones-pc/assets/125108218/1dfb109a-3d6f-4a93-b5d4-f2433b947dcd">
+
+<img width="269" alt="Screen Shot 2023-07-05 at 1 20 40 PM" src="https://github.com/mgballou/react-someones-pc/assets/125108218/74c5612b-ecb3-4c7d-a598-5ed1c7e7d24e">
+
+<img width="269" alt="Screen Shot 2023-07-05 at 1 21 25 PM" src="https://github.com/mgballou/react-someones-pc/assets/125108218/47820f30-4fd8-4d60-931f-b42f67ce1cc2">
 
 
 ## Features
