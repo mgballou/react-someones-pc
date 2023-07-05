@@ -76,6 +76,7 @@ VITE_TEAMS_URL=http://localhost:[PORT]/teams
 > * Adjust the abilities and held items of each Pokemon
 > * Error display for misspelled Pokemon names
 > * Animated sprites where available
+> * Improve button styling
 
 ## Technologies
 
